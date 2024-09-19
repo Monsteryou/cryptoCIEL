@@ -13,6 +13,9 @@ int main()
     
     AesGestion aes;
     aes.GenerateAESKey();
-    aes.SaveAESKeyToFile("cle_aes.key");
+    aes.SaveAESKeyToFile("cle_aes.txt");
+    aes.LoadAESKeyFromFile("cle_aes.txt");
+    aes.EncryptFileAES256("cle_aes.txt" , "cle_aes_crypt.txt");
+    aes.DecryptFileAES256("cle_aes_crypt.txt","cle_aes_decrypt.txt");
 
 }
