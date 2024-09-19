@@ -7,8 +7,8 @@
 int main()
 {
     HashGestion LM;
-    std::string monMessageHash = "test_txt";
-    std::cout << "SHA256 Hash: " << LM.CalculateSHA256(monMessageHash) << std::endl;
+    std::string File = "test_txt";
+    std::cout << "SHA256 Hash: " << LM.CalculateSHA256(file) << std::endl;
     return(0);
     
    
