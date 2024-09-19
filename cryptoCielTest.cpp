@@ -18,4 +18,12 @@ int main()
     aes.EncryptFileAES256("cle_aes.txt" , "cle_aes_crypt.txt");
     aes.DecryptFileAES256("cle_aes_crypt.txt","cle_aes_decrypt.txt");
 
+    RsaGestion RSA;
+    RSA.generationClef("RSAPublic.pem", "RSAPrive.pem", 4096);
+    std::string MessageEncrypt = "Chien";
+    std::string MessageCrypt = RSA.chiffrementRsa(MessageEncrypt);
+    std::cout << MessageCrypt << std::endl;
+    std::string MessageDecrypt = RSA.dechiffrementRsa(MessageCrypt);
+    std::cout << MessageDecrypt << std::endl;
+
 }
