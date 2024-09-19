@@ -6,17 +6,16 @@
 #include <fstream>
 
 /**
- * @brief Classe pour gérer le calcul des hachés SHA-256.
+ * Classe pour gérer le calcul des hachés SHA-256.
  *
- * Cette classe fournit des méthodes pour calculer le haché SHA-256 d'une chaîne de caractères
- * ou d'un fichier. Elle utilise la bibliothèque Crypto++ pour effectuer ces opérations.
+ *
  */
 class HashGestion
 {
 public:
 
     /**
-     * @brief Constructeur par défaut de la classe HashGestion.
+     *  Constructeur par défaut de la classe HashGestion.
      *
      * Initialise la classe HashGestion et affiche un message.
      */
@@ -39,7 +38,7 @@ public:
     std::string CalculateSHA256(const std::string& input);
 
     /**
-     * @brief Calcule le haché SHA-256 d'un fichier.
+     *  Calcule le haché SHA-256 d'un fichier.
      *
      *
      */
