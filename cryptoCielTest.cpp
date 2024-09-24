@@ -27,7 +27,7 @@ int main()
             * RSA - (6.1) 1er Programme
     */
 
-    RsaGestion RSA;
+    /*RsaGestion RSA;
     RSA.generationClef("YouennRSAPublic.pem", "YouennRSAPrive.pem", 2048);
 
     /*
@@ -43,8 +43,19 @@ int main()
     RSA.dechiffrementFichier("YouennRSADonnee.txt", "YouennRSADechiffre.txt", 2048);
     */
    
-    RSA.chargementClefs("YouennRSAPublic.pem", "YouennRSAPrive.pem");
+   /* RSA.chargementClefs("YouennRSAPublic.pem", "YouennRSAPrive.pem");
     RSA.chiffrementFichier("YouennRSADonnee.txt", "YouennRSAChiffre.txt", 2048); 
     RSA.dechiffrementFichier("YouennRSAChiffre.txt", "YouennRSADechiffre.txt", 2048);
-    
+    */
+
+    AesGestion AES;
+    AES.GenerateAESKey();
+    AES.SaveAESKeyToFile("ClefAES.txt"); 
+
+    RsaGestion RSA;
+    RSA.chargementClefs("YouennRSAPublic.pem", "YouennRSAPrive.pem");
+
+    RSA.EncryptClefsAES("");
+
 }
+
